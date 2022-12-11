@@ -1,0 +1,54 @@
+.header {
+  height: 60px;
+  padding: 0 20px;
+  .continer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      fc-bubbles {
+        height: 40px;
+      }
+      .index {
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        height: 40px;
+      }
+    }
+    .right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      fc-bubbles {
+        height: 30px;
+      }
+      .article, .me, .life, .github {
+        height: 100%;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .github {
+        margin-right: 0;
+      }
+      .icon {
+        height: 30px;
+      }
+    }
+    .icon {
+      cursor: pointer;
+    }
+  }
+}
+.footer {
+  height: 100px;
+  .container {
+    height: 100px;
+  }
+}

@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Footer from './components/Footer'
+import './App.scss'
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App () {
   return (
-    <div className="App">
-        <h3>想成为一个能给他人留下美好回忆的人...</h3>
-    </div>
+    <>
+      <RouterProvider router={router} />
+      <Footer />
+    </>
   )
 }
 

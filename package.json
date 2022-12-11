@@ -9,14 +9,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bytemd/plugin-frontmatter": "^1.17.4",
+    "@bytemd/plugin-gfm": "^1.17.4",
+    "@bytemd/plugin-highlight": "^1.17.4",
+    "@bytemd/react": "^1.17.4",
+    "axios": "^1.2.1",
+    "bytemd": "^1.17.4",
     "fancy-components": "^0.0.23",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "sass": "^1.56.2",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

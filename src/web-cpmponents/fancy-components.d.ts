@@ -6,6 +6,7 @@ declare global {
             'fc-bubbles': {
                 click: boolean
                 children: Element
+                onClick?: React.MouseEventHandler<HTMLImageElement> | undefined
             }
         }
     }
