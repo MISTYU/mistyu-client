@@ -1,7 +1,10 @@
 .header {
   height: 60px;
-  padding: 0 20px;
-  .continer {
+  background-color: rgba(255,255,255, 0.6);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #f4f5f5;
+  &-continer {
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -10,6 +13,7 @@
       height: 100%;
       display: flex;
       align-items: center;
+      margin-left: 20px;
       fc-bubbles {
         height: 40px;
       }
@@ -25,6 +29,7 @@
       height: 100%;
       display: flex;
       align-items: center;
+      margin-right: 20px;
       fc-bubbles {
         height: 30px;
       }
@@ -48,7 +53,7 @@
 }
 .footer {
   height: 100px;
-  .container {
+  &-container {
     height: 100px;
   }
 }

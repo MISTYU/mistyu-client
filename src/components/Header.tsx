@@ -21,9 +21,9 @@ function Header () {
 
   return (
     <div className="header">
-      <div className="continer">
+      <div className="header-continer">
         <div className="left">
-        <div className="index">
+          <div className="index">
             <fc-bubbles click onClick={onRouter('home')}>
               <img src={HomeIcon} className="icon" />
             </fc-bubbles>
