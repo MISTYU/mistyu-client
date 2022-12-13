@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@bytemd/plugin-breaks': ^1.17.4
   '@bytemd/plugin-frontmatter': ^1.17.4
   '@bytemd/plugin-gfm': ^1.17.4
   '@bytemd/plugin-highlight': ^1.17.4
@@ -19,6 +20,7 @@ specifiers:
   vite: ^3.2.3
 
 dependencies:
+  '@bytemd/plugin-breaks': 1.17.4_bytemd@1.17.4
   '@bytemd/plugin-frontmatter': 1.17.4_bytemd@1.17.4
   '@bytemd/plugin-gfm': 1.17.4_bytemd@1.17.4
   '@bytemd/plugin-highlight': 1.17.4_bytemd@1.17.4
@@ -306,6 +308,15 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
     dev: true
+
+  /@bytemd/plugin-breaks/1.17.4_bytemd@1.17.4:
+    resolution: {integrity: sha512-BeuR/6UkjOJ/ztq+Xd/a8T2FVlbd2MJCXuSYJf2YWrw853SNHUyv0+xEv20VCfnFBvSi/fmvMdBg+udOe+hhGQ==}
+    peerDependencies:
+      bytemd: ^1.5.0
+    dependencies:
+      bytemd: 1.17.4
+      remark-breaks: 3.0.2
+    dev: false
 
   /@bytemd/plugin-frontmatter/1.17.4_bytemd@1.17.4:
     resolution: {integrity: sha512-OwXF6Thr0N14nAaYKcUxSZEgJcmsBnFE5ShDPqa4lqFKoTum0Ntiijgy7D0qsKUQOvs9FiMs5iPQQmwkobfnhQ==}
@@ -1773,6 +1784,14 @@ packages:
       '@types/hast': 2.3.4
       hast-util-to-html: 8.0.3
       unified: 10.1.2
+    dev: false
+
+  /remark-breaks/3.0.2:
+    resolution: {integrity: sha512-x96YDJ9X+Ry0/JNZFKfr1hpcAKvGYWfUTszxY9RbxKEqq6uzPPoLCuHdZsLPZZUdAv3nCROyc7FPrQLWr2rxyw==}
+    dependencies:
+      '@types/mdast': 3.0.10
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
     dev: false
 
   /remark-frontmatter/4.0.1:

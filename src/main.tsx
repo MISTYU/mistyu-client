@@ -5,8 +5,9 @@ import './index.css'
 import 'bytemd/dist/index.css'
 import 'highlight.js/styles/vs.css'
 import './assets/css/highlight.css'
-import { FcBubbles } from 'fancy-components'
+import { FcBubbles, FcTypingInput } from 'fancy-components'
 new FcBubbles()
+new FcTypingInput()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

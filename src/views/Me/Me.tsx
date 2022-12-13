@@ -1,7 +1,9 @@
+import './me.scss'
+
 function Me () {
   return (
     <div className="content">
-      Me
+      <div className="me">开发中...</div>
     </div>
   )
 }

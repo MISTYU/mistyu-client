@@ -1,7 +1,11 @@
+import './life.scss'
+
 function Life () {
   return (
     <div className="content">
-      Life
+      <div className="life">
+        开发中...
+      </div>
     </div>
   )
 }

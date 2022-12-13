@@ -4,6 +4,7 @@ import Articles from '../views/Articles/Articles'
 import Life from '../views/Life/Life'
 import Me from '../views/Me/Me'
 import Pages from '../views/Pages/Pages'
+import Article from '../views/Article/Article'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'me',
         element: <Me />
+      },
+      {
+        path: 'article/:id',
+        element: <Article />
       }
     ]
   }

@@ -3,3 +3,9 @@
   border-radius: 6px;
   color: #eee;
 }
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #8b949e;
+  border-left: 0.25em solid #8b949e;
+}

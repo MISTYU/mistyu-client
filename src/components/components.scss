@@ -17,12 +17,18 @@
       fc-bubbles {
         height: 40px;
       }
-      .index {
+      .home {
         display: flex;
         align-items: center;
       }
       .icon {
         height: 40px;
+      }
+    }
+    .center {
+      fc-typing-input {
+        --height: 30px;
+        font-size: 12px;
       }
     }
     .right {

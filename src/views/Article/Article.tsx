@@ -4,9 +4,11 @@ import gfm from '@bytemd/plugin-gfm'
 import { Editor, Viewer } from '@bytemd/react'
 import frontmatter from '@bytemd/plugin-frontmatter'
 import highlight from '@bytemd/plugin-highlight'
-import httpV from '../note/http.md?raw'
+import httpV from '../../..//note/http.md?raw'
+import breaks from '@bytemd/plugin-breaks'
 
 const plugins = [
+  breaks(),
   gfm(),
   frontmatter(),
   highlight()
@@ -16,7 +18,7 @@ const plugins = [
 
 function Article() {
   return (
-    <div className="contanier">
+    <div className="detail">
       <Viewer
         value={httpV}
         plugins={plugins}

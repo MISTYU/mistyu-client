@@ -4,7 +4,11 @@
   flex-direction: column;
   .container {
     flex: 1;
+    margin: 0 auto;
     margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
 

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@bytemd/plugin-breaks": "^1.17.4",
     "@bytemd/plugin-frontmatter": "^1.17.4",
     "@bytemd/plugin-gfm": "^1.17.4",
     "@bytemd/plugin-highlight": "^1.17.4",
