@@ -1,15 +1,9 @@
 #root {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  .placeholder-header {
+    height: 60px;
+  }
   .container {
-    flex: 1;
-    margin: 0 auto;
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    overflow-y: scroll;
   }
 }
 

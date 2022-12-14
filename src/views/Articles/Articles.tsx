@@ -9,24 +9,22 @@ function Articles () {
   const [list, hasMore] = useMountData(pageIndex) as [ArticleType[], React.MutableRefObject<boolean>]
   const scrollTopValue = useRef(0)
   const scrollCb = (e: any) => {
-    if (hasMore.current && e.target.scrollTop - scrollTopValue.current > 400) {
+    console.log('scrollCb')
+    if (hasMore.current && e.target.scrollingElement.scrollTop - scrollTopValue.current > 400) {
       scrollTopValue.current = e.target.scrollTop
       setPageIndex(pageIndex + 1)
     }
   }
   useEffect(() => {
-    let containerRef = document.querySelector('.container')
-    containerRef!.addEventListener('scroll', scrollCb)
+    document.addEventListener('scroll', scrollCb)
     
     return () => {
-      containerRef!.removeEventListener('scroll', scrollCb)
-      containerRef = null
+      document.removeEventListener('scroll', scrollCb)
     }
   }, [])
 
   return (
     <div className='content'>
-      <div>{JSON.stringify(hasMore)}</div>
       <div className="articles">
         { 
           (list as ArticleType[]).map
