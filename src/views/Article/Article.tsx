@@ -4,8 +4,11 @@ import gfm from '@bytemd/plugin-gfm'
 import { Editor, Viewer } from '@bytemd/react'
 import frontmatter from '@bytemd/plugin-frontmatter'
 import highlight from '@bytemd/plugin-highlight'
-import httpV from '../../..//note/http.md?raw'
 import breaks from '@bytemd/plugin-breaks'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
+import '../../assets/css/markdown.scss'
 
 const plugins = [
   breaks(),
@@ -17,10 +20,17 @@ const plugins = [
 
 
 function Article() {
+  const [content, setContent] = useState('')
+  const { id } = useParams()
+  useEffect(() => {
+    axios.get(`/api/articles/article/${id}`).then(res => {
+      setContent(res.data.data.content)
+    })
+  })
   return (
     <div className="detail">
       <Viewer
-        value={httpV}
+        value={content}
         plugins={plugins}
       />
     </div>
