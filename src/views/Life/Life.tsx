@@ -4,7 +4,12 @@ function Life () {
   return (
     <div className="content">
       <div className="life">
-        开发中...
+        <div>
+          记录生活
+        </div>
+        <div>
+          开发中...
+        </div>
       </div>
     </div>
   )

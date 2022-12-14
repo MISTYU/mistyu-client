@@ -40,7 +40,7 @@
       }
       .article, .me, .life, .github, .query {
         height: 100%;
-        margin-right: 30px;
+        margin-right: 20px;
         display: flex;
         align-items: center;
       }
@@ -49,6 +49,15 @@
       }
       .icon {
         height: 30px;
+      }
+      .me, .github {
+        // height: 26px;
+        fc-bubbles {
+          height: 24px;
+          img {
+            height: 24px;
+          }
+        }
       }
     }
     .icon {
