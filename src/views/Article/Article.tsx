@@ -21,26 +21,36 @@ const plugins = [
 
 function Article() {
   const [content, setContent] = useState('')
+  const [updatedAt, setUpdatedAt] = useState('')
   const { id } = useParams()
   useEffect(() => {
     axios.get(`/api/articles/article/${id}`).then(res => {
       setContent(res.data.data.content)
+      setUpdatedAt(res.data.data.updatedAt)
     })
   })
   return (
-    <div className="detail">
-      <Viewer
-        value={content}
-        plugins={plugins}
-      />
-    </div>
-    // <Editor
-    //   value={value}
-    //   plugins={plugins}
-    //   onChange={(v) => {
-    //     setValue(v)
-    //   }}
-    // />
+    <>
+      <div className="detail">
+        <Viewer
+          value={content}
+          plugins={plugins}
+        />
+        {/* <Editor
+          value={value}
+          plugins={plugins}
+          onChange={(v) => {
+            setValue(v)
+          }}
+        /> */}
+        <div className="time">
+          更新于：<span>{ updatedAt }</span>
+        </div>
+      </div>
+      
+    </>
+    
+    
   )
 }
 

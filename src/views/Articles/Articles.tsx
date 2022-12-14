@@ -16,6 +16,7 @@ function Articles () {
               title={article.title}
               desc={article.desc}
               createdAt={article.createdAt}
+              tag={article.tag}
               id={article.id}
             />
           )

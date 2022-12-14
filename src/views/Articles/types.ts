@@ -3,4 +3,5 @@ export interface ArticleType {
   desc: string
   createdAt: string
   id: number
+  tag: string
 }

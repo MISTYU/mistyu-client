@@ -26,12 +26,6 @@
         height: 40px;
       }
     }
-    .center {
-      fc-typing-input {
-        --height: 30px;
-        font-size: 12px;
-      }
-    }
     .right {
       height: 100%;
       display: flex;
@@ -40,7 +34,11 @@
       fc-bubbles {
         height: 30px;
       }
-      .article, .me, .life, .github {
+      fc-typing-input {
+        --height: 30px;
+        font-size: 12px;
+      }
+      .article, .me, .life, .github, .query {
         height: 100%;
         margin-right: 30px;
         display: flex;

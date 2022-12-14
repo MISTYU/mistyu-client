@@ -48,11 +48,10 @@ function Header () {
             </fc-bubbles>
           </div>
         </div>
-        <div className='center'>
-          <fc-typing-input placeholder="功能开发中..." height="30px" /* onInput={handleInput} */ />
-
-        </div>
         <div className="right">
+          <div className='query'>
+            <fc-typing-input placeholder="功能开发中..." height="30px" /* onInput={handleInput} */ />
+          </div>
           <div className="article">
             <fc-bubbles click onClick={onRouter('')}>
               <img src={ArticleIcon} className="icon" />
