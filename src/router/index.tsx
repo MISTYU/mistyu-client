@@ -5,6 +5,9 @@ import Life from '../views/Life/Life'
 import Me from '../views/Me/Me'
 import Pages from '../views/Pages/Pages'
 import Article from '../views/Article/Article'
+import { lazy, Suspense } from 'react'
+
+const LazyArticle = lazy(() => import('../views/Article/Article'))
 
 const router = createBrowserRouter([
   {
@@ -13,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'home',
-        element: <Home />
+        element: <Home />,
       },
       {
         index: true,
@@ -29,7 +32,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'article/:id',
-        element: <Article />
+        element: <Suspense fallback={`loading`}>
+          <LazyArticle />
+        </Suspense>
       }
     ]
   }
