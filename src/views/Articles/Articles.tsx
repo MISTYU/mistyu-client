@@ -42,6 +42,7 @@ function Articles () {
                 createdAt={article.createdAt}
                 tag={article.tag}
                 id={article.id}
+                updatedAt={article.updatedAt}
               />
             )
         }

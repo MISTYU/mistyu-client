@@ -2,7 +2,7 @@ import { ArticleType } from "../types"
 import { useNavigate } from 'react-router-dom'
 
 function Article (props: ArticleType) {
-  const { title, desc, createdAt, id, tag } = props
+  const { title, desc, createdAt, id, tag, updatedAt } = props
   const navigate = useNavigate()
   return (
     <div className="item" onClick={() => {navigate(`article/${id}`)}}>
@@ -13,7 +13,8 @@ function Article (props: ArticleType) {
       <div className="item-time">
         <div>{ tag }</div>
         <div>
-          <span>更新于：{ createdAt }</span>
+          <span className="update-time">updatedAt：{ updatedAt }</span>
+          <span>createdAt：{ createdAt }</span>
         </div>
       </div>
     </div>
