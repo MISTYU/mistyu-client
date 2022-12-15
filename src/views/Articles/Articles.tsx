@@ -3,16 +3,22 @@ import Article from './components/Item'
 import useMountData from '../../hooks/useMountData'
 import { ArticleType } from './types'
 import { useEffect, useState, useRef } from 'react'
+import useBackPosition from '../../hooks/useBackPosition'
 
 function Articles () {
-  const [pageIndex, setPageIndex] = useState(0)
+  const [pageIndex, setPageIndex] = useState(1)
   const [list, hasMore] = useMountData(pageIndex) as [ArticleType[], React.MutableRefObject<boolean>]
   const scrollTopValue = useRef(0)
+  const prePageIndex = useRef(1)
+  // useBackPosition()
+  // useEffect(() => {
+  //   document.documentElement.scrollTop = Number(localStorage.getItem('ppreScrollTopre')) || 0
+  // })
   const scrollCb = (e: any) => {
-    console.log('scrollCb')
     if (hasMore.current && e.target.scrollingElement.scrollTop - scrollTopValue.current > 400) {
-      scrollTopValue.current = e.target.scrollTop
-      setPageIndex(pageIndex + 1)
+      scrollTopValue.current = e.target.scrollingElement.scrollTop
+      prePageIndex.current++
+      setPageIndex(prePageIndex.current)
     }
   }
   useEffect(() => {

@@ -4,7 +4,6 @@ import Articles from '../views/Articles/Articles'
 import Life from '../views/Life/Life'
 import Me from '../views/Me/Me'
 import Pages from '../views/Pages/Pages'
-import Article from '../views/Article/Article'
 import { lazy, Suspense } from 'react'
 
 const LazyArticle = lazy(() => import('../views/Article/Article'))
@@ -32,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'article/:id',
-        element: <Suspense fallback={`loading`}>
+        element: <Suspense fallback={<div style={{minHeight: 'calc(100vh - 184px)'}}>loading...</div>}>
           <LazyArticle />
         </Suspense>
       }

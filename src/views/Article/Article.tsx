@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import '../../assets/css/markdown.scss'
+import useBackTop from '../../hooks/useBackTop'
 
 const plugins = [
   breaks(),
@@ -23,6 +24,7 @@ function Article() {
   const [content, setContent] = useState('')
   const [updatedAt, setUpdatedAt] = useState('')
   const { id } = useParams()
+  useBackTop()
   useEffect(() => {
     axios.get(`/api/articles/article/${id}`).then(res => {
       setContent(res.data.data.content)
@@ -32,10 +34,15 @@ function Article() {
   return (
     <>
       <div className="detail">
-        <Viewer
-          value={content}
-          plugins={plugins}
-        />
+        {
+          !content ?
+            <div className="blank">{ content }</div> :
+            <Viewer
+              value={content}
+              plugins={plugins}
+            />
+        }
+        
         {/* <Editor
           value={value}
           plugins={plugins}
