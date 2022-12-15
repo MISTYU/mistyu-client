@@ -30,14 +30,14 @@ function Header () {
       // 发送请求
     }
   }
-  useEffect(() => {
-    const ref = document.querySelector('fc-typing-input')
-    ref!.addEventListener('keydown', handKeyDown)
-  }, [])
-  useEffect(() => () => {
-    const ref = document.querySelector('fc-typing-input')
-    ref!.removeEventListener('keydown', handKeyDown)
-  })
+  // useEffect(() => {
+  //   const ref = document.querySelector('fc-typing-input')
+  //   ref!.addEventListener('keydown', handKeyDown)
+  // }, [])
+  // useEffect(() => () => {
+  //   const ref = document.querySelector('fc-typing-input')
+  //   ref!.removeEventListener('keydown', handKeyDown)
+  // })
   return (
     <div className="header">
       <div className="header-continer">
@@ -49,9 +49,9 @@ function Header () {
           </div>
         </div>
         <div className="right">
-          <div className='query'>
-            <fc-typing-input placeholder="功能开发中..." height="30px" /* onInput={handleInput} */ />
-          </div>
+          {/* <div className='query'>
+            <fc-typing-input placeholder="功能开发中..." height="30px" onInput={handleInput} />
+          </div> */}
           <div className="article">
             <fc-bubbles click onClick={onRouter('')}>
               <img src={ArticleIcon} className="icon" />

@@ -1,6 +1,18 @@
 .content {
-  .me {
-    text-align: center;
-    margin-top: 20px;
+  .me-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    ul {
+      li {
+        list-style-type: none
+      }
+    }
+    .markdown-body {
+      width: 70%;
+      h1 {
+        text-align: center;
+      }
+    }
   }
 }
