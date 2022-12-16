@@ -11,10 +11,10 @@ function Article (props: ArticleType) {
         { desc ? <div className="item-desc">{ desc }</div> : null }
       </div>
       <div className="item-time">
-        <div>{ tag }</div>
-        <div>
-          <span className="update-time">updatedAt：{ updatedAt }</span>
-          <span>createdAt：{ createdAt }</span>
+        <div className="tag">{ tag }</div>
+        <div className="times">
+          <div className="update-time">updatedAt：{ updatedAt }</div>
+          <div className="create-time">createdAt：{ createdAt }</div>
         </div>
       </div>
     </div>
