@@ -1,0 +1,35 @@
+pipeline {
+  agent any
+  stages {
+    stage('pull code') {
+      steps {
+        git branch: 'main', credentialsId: 'root', url: 'git@github.com:MISTYU/mistyu-client.git'
+      }
+    }
+    stage('clean cache') {
+      steps {
+        sh 'npm cache clean -f'
+      }
+    }
+    stage('install') {
+      steps {
+        sh 'pnpm install --unsafe-perm=true'
+      }
+    }
+    stage('clean dist') {
+      steps {
+        sh 'rm -rf dist'
+      }
+    }
+    stage('build') {
+      steps {
+        sh 'pnpm build'
+      }
+    }
+    stage('move') {
+      steps {
+        sshPublisher(publishers: [sshPublisherDesc(configName: 'mistyu-client', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'echo "scueess"', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'dist', sourceFiles: 'dist/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+      }
+    }
+  }
+}
