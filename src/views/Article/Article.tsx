@@ -30,7 +30,7 @@ function Article() {
       setContent(res.data.data.content)
       setUpdatedAt(res.data.data.updatedAt)
     })
-  })
+  }, [])
   return (
     <>
       <div className="detail">
