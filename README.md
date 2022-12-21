@@ -1,6 +1,4 @@
 # mistyu-client
 博客前台
 
-http://119.23.233.82 (新域名正在备案中)
-
-http://docs.mistyu.com
+博客地址：https://www.mistyu.com
