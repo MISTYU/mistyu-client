@@ -1,18 +1,23 @@
-import axios from 'axios'
-// import content from '../../note/notes/upload.md?raw'
+import icp from '../assets/icons/icp.svg'
+import copyright from '../assets/icons/copyright.svg'
 
 function Footer () {
-  // const upload = () => {
-  //   axios.post('api/articles/article', {
-  //       title: '关于文件上传',
-  //       tag: 'work',
-  //       desc: '常用的文件上传方式',
-  //       content
-  //   })
-  // }
   return (
     <div className="footer">
-      <div className="footer-container"></div>
+      <div className="footer-container">
+        <div className="icp">
+          <div>
+            <img className="icon" src={icp} alt="" />
+          </div>
+          <div>赣ICP备2022011372号-1</div>
+        </div>
+        <div className="copyright">
+          <div>
+            <img className="icon" src={copyright} alt="" />
+          </div>
+          <div>2021-2023 @mistyu</div>
+        </div>
+      </div>
     </div>
   )
 }
